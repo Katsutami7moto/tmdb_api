@@ -34,9 +34,9 @@ def get_rating(my_movie, movies_data, num_to_recommend=8):
     )
     final_recommendation = []
     for movie in rating:
-        if len(final_recommendation) > num_to_recommend:
-            break
         final_recommendation.append(movie)
+        if len(final_recommendation) == num_to_recommend:
+            break
     return final_recommendation
 
 
